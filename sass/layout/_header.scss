@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#header{
+    border-bottom: 3px solid #D2D2D2;
+    padding-top: 16px;
+    padding-bottom: 2px;
+}
+
+#localisation{
+    //width: 40%;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    background-color: #EAEAEA;
+    font-weight: bold;
+    .localisation{
+        width: 45%;
+        i{
+            padding-right: 15px;;
+        }
+    }
+
+}
