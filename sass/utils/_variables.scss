@@ -9,6 +9,7 @@ $color-grey-dark-dark: #868686;
 $font-logos-titres: 'Shrikhand', cursive;
 $font-textes: 'Roboto', sans-serif;
 $footer-font-size: 16px;
+$loader-effect-duration: 3s;
 
 $labels: (
     entrees: ("entrées"),
@@ -153,8 +154,105 @@ $restoX:(
         )
     )
 );
+$resto2:(
+    name:("La note enchantée"),  
+    entrees:(
+        1:(titre:("Ravioles de foie gras"),
+        sous-titre:("Accompagnés de leur crème à la truffe"),
+        prix:("25€")
+        ),
+        2:(titre:("Caviar osciètre"),
+        sous-titre:("Sur blini à la farine de blé noir"),
+        prix:("35€")
+        ),
+        3:(titre:("Homard et espuma de potiron"),
+        sous-titre:("Mariné aux zestes d'orange"),
+        prix:("28€")
+        ),
+        4:(titre:("Foie gras de canard cuit entier"),
+        sous-titre:("Confiture de figue et pain toasté"),
+        prix:("35€")
+        )
+    ),
+    plats:(
+        1:(titre:("Noix de coquilles Saint-Jacques"),
+        sous-titre:("Sur lit de purée de céleri-rave"),
+        prix:("40€")
+        ),
+        2:(titre:("Langoustine poêlée"),
+        sous-titre:("Purée de patate douce"),
+        prix:("35€")
+        ),
+        3:(titre:("Mijoté de queue de boeuf "),
+        sous-titre:("Et riz sauvage aux zestes de citron"),
+        prix:("44€")
+        )
+    ),
+    desserts:(
+        1:(titre:("Macaron noisette et chocolat"),
+        sous-titre:("Glace au caramel brun et sel de Guérande"),
+        prix:("18€")
+        ),
+        2:(titre:("Baba au rhum revisité"),
+        sous-titre:("Avec son coulis de citron"),
+        prix:("22€")
+        ),
+        3:(titre:("Tarte au citron meringuée"),
+        sous-titre:("Déstructurée"),
+        prix:("23€")
+        )
+    )
+);
+
+$resto3:(
+    name:("À la française"),  
+    entrees:(
+        1:(titre:("Tartare de poulpe acidulé"),
+        sous-titre:("Aux zestes d'orange"),
+        prix:("25€")
+        ),
+        2:(titre:("Velouté de légumes d'antan"),
+        sous-titre:("Carotte, panais, topinambour"),
+        prix:("35€")
+        ),
+        3:(titre:("Soupe à l'oignon"),
+        sous-titre:("Revisitée"),
+        prix:("28€")
+        )
+    ),
+    plats:(
+        1:(titre:("Coquilles Saint-Jacques"),
+        sous-titre:("Accompagnées d'une purée de panais"),
+        prix:("40€")
+        ),
+        2:(titre:("Magret de canard"),
+        sous-titre:("Et parmentier de pommes de terre"),
+        prix:("35€")
+        ),
+        3:(titre:("Pigeonneau d’Ille-et-Vilaine"),
+        sous-titre:("Sur son lit de gnocchis aux légumes"),
+        prix:("44€")
+        )
+    ),
+    desserts:(
+        1:(titre:("Pétales de violettes glacés"),
+        sous-titre:("Et purée de noisettes"),
+        prix:("18€")
+        ),
+        2:(titre:("Fondant au chocolat"),
+        sous-titre:("Revisité"),
+        prix:("22€")
+        ),
+        3:(titre:("Millefeuille croustillant"),
+        sous-titre:("Myrtilles et pâte d’amande"),
+        prix:("23€")
+        )
+    )
+);
 
 $restos:(
     1:($resto1),
+    2:($resto2),
+    3:($resto3),
     4:($resto4)
 )

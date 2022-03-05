@@ -20,13 +20,13 @@
     </header>
     <div class="background-image resto1">
         <div class="titre-coeur">
-            <span class="titres titres__principal">La palette du goût</span>
+            <span class="titres titres__principal resto-name"></span>
             <i class="fa fa-heart-o fa-lg"></i>
         </div>
         <div class="menu menu1">
             <section class="menu1__entrees">
                 <div class="label">
-                    <div class="label__label label__content textes"></div>
+                    <h2 class="label__label label__content textes">Entrées</h2>
                     <div class="label__souligne"></div>
                 </div>
                 <div class="menu1__entrees__list">
@@ -36,6 +36,7 @@
                             <div class="assiette__description__precision textes"></div>
                         </div>
                         <div class="assiette__prix textes"></div>
+                        <div class="chosen"></div>
                     </div>
                     <div class="assiette menu__entrees__2">
                         <div class="assiette__description">
@@ -55,7 +56,7 @@
             </section>
             <section class="menu1__plats">
                 <div class="label">
-                    <div class="label__label label__content textes"></div>
+                    <h2 class="label__label label__content textes">Plats</h2>
                     <div class="label__souligne"></div>
                 </div>
                 <div class="menu1__plats__list">
@@ -84,7 +85,7 @@
             </section>
             <section class="menu1__desserts">
                 <div class="label">
-                    <div class="label__label label__content textes"></div>
+                    <h2 class="label__label label__content textes">Desserts</h2>
                     <div class="label__souligne"></div>
                 </div>
                 <div class="menu1__desserts__list">
@@ -111,7 +112,7 @@
                     </div>
                 </div>
             </section>
-            <div class="button">Commander</div>
+            <div class="button textes">Commander</div>
         </div>
     </div>
     <footer>
@@ -125,7 +126,7 @@
             <span class="textes rubrique__item">Devenir partenaire</span>
         </div>
         <div class="rubrique textes">Mentions légales</div>
-        <div class="rubrique textes">Contact</div>
+        <a id="contact" href="mailto:contact@ohmyfood.com" class="rubrique textes">Contact</a>
     </footer>
 </body>
 </html>

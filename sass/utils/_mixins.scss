@@ -37,11 +37,11 @@
 }
 
 @mixin menu($resto,$type,$label){
-    &__#{$type}{
-        & .label__content{
-            @include label($label);
-        }
-    }
+    // &__#{$type}{
+    //     & .label__content{
+    //         @include label($label);
+    //     }
+    // }
     &__#{$type}__list{
         display: flex;
         flex-direction: column;

@@ -39,6 +39,7 @@ a:link, a:visited {
   color: white;
   font-weight: bold;
   box-shadow: 4px 6px 9px 0px #D2D2D2;
+  text-align: center;
 }
 
 .label {
@@ -134,7 +135,7 @@ header {
   margin-right: 20px;
   gap: 20px;
 }
-.fonctionnement h1 {
+.fonctionnement h2 {
   margin-bottom: 5px;
 }
 .fonctionnement__item {
@@ -317,6 +318,10 @@ footer .titres {
   margin-bottom: 10px;
 }
 
+#contact {
+  color: white;
+}
+
 .rubrique {
   display: flex;
   flex-direction: row;
@@ -417,9 +422,9 @@ footer .titres {
 }
 .loader {
   animation-iteration-count: 1;
-  -webkit-animation: spin 10s forwards;
+  -webkit-animation: spin 3s forwards;
   /* Safari, Opera, Chrome */
-  animation: decale 10s forwards;
+  animation: decale 3s forwards;
   /* Tous les autres navigateurs */
   display: flex;
   align-items: center;
@@ -438,30 +443,33 @@ footer .titres {
   position: absolute;
   top: 200px;
   animation-iteration-count: 1;
-  -webkit-animation: slogan 10s forwards;
+  -webkit-animation: slogan 3s forwards;
   /* Safari, Opera, Chrome */
-  animation: slogan 10s forwards;
+  animation: slogan 3s forwards;
   /* Tous les autres navigateurs */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.loader_effect h1 {
+.loader_effect h2 {
   padding: 30px;
   text-align: center;
   font-size: 18px;
 }
 .loader_effect .hourglass {
   animation-iteration-count: 1;
-  -webkit-animation: spin 10s forwards;
+  -webkit-animation: spin 3s forwards;
   /* Safari, Opera, Chrome */
-  animation: spin 10s forwards;
+  animation: spin 3s forwards;
   /* Tous les autres navigateurs */
 }
 
 @keyframes start-invisible {
   0% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -472,15 +480,18 @@ footer .titres {
   0% {
     opacity: 0;
   }
+  90% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 .start-transparent {
   animation-iteration-count: 1;
-  -webkit-animation: spin 10s forwards;
+  -webkit-animation: spin 3s forwards;
   /* Safari, Opera, Chrome */
-  animation: start-invisible 10s forwards;
+  animation: start-invisible 3s forwards;
   /* Tous les autres navigateurs */
 }
 
@@ -523,9 +534,6 @@ footer .titres {
   flex-direction: column;
   gap: 40px;
 }
-.menu .menu1__entrees .label__content::after {
-  content: "entrées";
-}
 .menu .menu1__entrees__list {
   display: flex;
   flex-direction: column;
@@ -557,9 +565,6 @@ footer .titres {
 }
 .menu .menu1__entrees__list .menu__entrees__3 .assiette__prix::after {
   content: "20€";
-}
-.menu .menu1__plats .label__content::after {
-  content: "plats";
 }
 .menu .menu1__plats__list {
   display: flex;
@@ -593,9 +598,6 @@ footer .titres {
 .menu .menu1__plats__list .menu__plats__3 .assiette__prix::after {
   content: "44€";
 }
-.menu .menu1__desserts .label__content::after {
-  content: "desserts";
-}
 .menu .menu1__desserts__list {
   display: flex;
   flex-direction: column;
@@ -628,8 +630,206 @@ footer .titres {
 .menu .menu1__desserts__list .menu__desserts__3 .assiette__prix::after {
   content: "23€";
 }
-.menu .menu4__entrees .label__content::after {
-  content: "entrées";
+.menu .menu2__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Ravioles de foie gras";
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Accompagnés de leur crème à la truffe";
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Caviar osciètre";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Sur blini à la farine de blé noir";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Homard et espuma de potiron";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Mariné aux zestes d'orange";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "28€";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__description__appelation::after {
+  content: "Foie gras de canard cuit entier";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__description__precision::after {
+  content: "Confiture de figue et pain toasté";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Noix de coquilles Saint-Jacques";
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Sur lit de purée de céleri-rave";
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Langoustine poêlée";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "Purée de patate douce";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Mijoté de queue de boeuf ";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Et riz sauvage aux zestes de citron";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu2__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Macaron noisette et chocolat";
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Glace au caramel brun et sel de Guérande";
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Baba au rhum revisité";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Avec son coulis de citron";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Tarte au citron meringuée";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "Déstructurée";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
+}
+.menu .menu3__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Tartare de poulpe acidulé";
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Aux zestes d'orange";
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Velouté de légumes d'antan";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Carotte, panais, topinambour";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Soupe à l'oignon";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Revisitée";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "28€";
+}
+.menu .menu3__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Coquilles Saint-Jacques";
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Accompagnées d'une purée de panais";
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Magret de canard";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "Et parmentier de pommes de terre";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Pigeonneau d’Ille-et-Vilaine";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Sur son lit de gnocchis aux légumes";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu3__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Pétales de violettes glacés";
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Et purée de noisettes";
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Fondant au chocolat";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Revisité";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Millefeuille croustillant";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "Myrtilles et pâte d’amande";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
 }
 .menu .menu4__entrees__list {
   display: flex;
@@ -663,9 +863,6 @@ footer .titres {
 .menu .menu4__entrees__list .menu__entrees__3 .assiette__prix::after {
   content: "20€";
 }
-.menu .menu4__plats .label__content::after {
-  content: "plats";
-}
 .menu .menu4__plats__list {
   display: flex;
   flex-direction: column;
@@ -697,9 +894,6 @@ footer .titres {
 }
 .menu .menu4__plats__list .menu__plats__3 .assiette__prix::after {
   content: "44€";
-}
-.menu .menu4__desserts .label__content::after {
-  content: "desserts";
 }
 .menu .menu4__desserts__list {
   display: flex;

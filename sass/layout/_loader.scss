@@ -5,9 +5,6 @@
   100% { opacity:1; transform:  translateY(0) scale(1,1);}
 }
 @-webkit-keyframes decale {
-  // 0% { transform: rotate(0deg) scale(1,1) ease-in;}
-  // 99% { transform: rotate(360deg) scale(2,2) ease-in;}
-  // 100% { transform: rotate(0) scale(0,0) ease-in;}
   0% { opacity: 0;transform: translateY(80%) scale(2,2);}
   50% { opacity: 0.5 ; transform: translateY(50%) scale(2,2);}
   100% { opacity:1; transform:  translateY(0) scale(1,1);}
@@ -39,8 +36,8 @@
 
 .loader {
   animation-iteration-count: 1;
-  -webkit-animation: spin 10s forwards; /* Safari, Opera, Chrome */
-  animation: decale 10s forwards; /* Tous les autres navigateurs */
+  -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: decale $loader-effect-duration forwards; /* Tous les autres navigateurs */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,13 +56,13 @@
   position: absolute;
   top: 200px;
   animation-iteration-count: 1;
-  -webkit-animation: slogan 10s forwards; /* Safari, Opera, Chrome */
-  animation: slogan 10s forwards; /* Tous les autres navigateurs */
+  -webkit-animation: slogan $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: slogan $loader-effect-duration forwards; /* Tous les autres navigateurs */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  & h1{
+  & h2{
     padding: 30px;
     text-align: center;
     font-size: 18px;
@@ -73,22 +70,24 @@
   }
   & .hourglass{
     animation-iteration-count: 1;    
-    -webkit-animation: spin 10s forwards; /* Safari, Opera, Chrome */
-    animation: spin 10s forwards; /* Tous les autres navigateurs */
+    -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+    animation: spin $loader-effect-duration forwards; /* Tous les autres navigateurs */
     }
 }
 
 @keyframes start-invisible{
   0% { opacity: 0;}
+  90% { opacity: 0;}
   100% { opacity: 1;}
 }
 @-webkit-keyframes start-invisible{
   0% { opacity: 0;}
+  90% { opacity: 0;}
   100% { opacity: 1;}
 }
 
 .start-transparent{
   animation-iteration-count: 1;
-  -webkit-animation: spin 10s forwards; /* Safari, Opera, Chrome */
-  animation: start-invisible 10s forwards; /* Tous les autres navigateurs */
+  -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: start-invisible $loader-effect-duration forwards; /* Tous les autres navigateurs */
 }
