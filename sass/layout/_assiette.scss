@@ -1,0 +1,28 @@
+.assiette{
+    width: 100%;
+    background-color: white;
+    @include box-shadow;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 12px;
+    &__description{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &__appelation{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        &__precision{
+            font-size: 15px;
+        }
+    }
+    &__prix{
+        font-size: 15px;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+}

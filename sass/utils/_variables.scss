@@ -9,3 +9,152 @@ $color-grey-dark-dark: #868686;
 $font-logos-titres: 'Shrikhand', cursive;
 $font-textes: 'Roboto', sans-serif;
 $footer-font-size: 16px;
+
+$labels: (
+    entrees: ("entrées"),
+    plats: ("plats"),
+    desserts: ("desserts")
+);
+
+$resto1: (
+    name: ("La palette du goût"),
+    entrees:(
+        1:(titre:("Fricassée d'escargot"),
+        sous-titre:("Au piment d'Espelette"),
+        prix:("25€")
+        ),
+        2:(titre:("Foie gras de canard mi-cuit"),
+        sous-titre:("Et ses copeaux de truffe noire"),
+        prix:("35€")
+        ),
+        3:(titre:("Oeuf au plat"),
+        sous-titre:("Assaisonné à la truffe sur lit de caviar"),
+        prix:("20€")
+        )
+    ),
+    plats:(
+        1:(titre:("Filet de boeuf aux herbes"),
+        sous-titre:("Accompagné de sa ribambelle de légumes"),
+        prix:("40€")
+        ),
+        2:(titre:("Parmentier de queue de boeuf"),
+        sous-titre:("À la truffe noire sur sa purée de panais"),
+        prix:("35€")
+        ),
+        3:(titre:("Filet de turbot"),
+        sous-titre:("Aux agrumes"),
+        prix:("44€")
+        )
+    ),
+    desserts:(
+        1:(titre:("Paris-Brest"),
+        sous-titre:("Revisité"),
+        prix:("18€")
+        ),
+        2:(titre:("Macaron au chocolat d'exception"),
+        sous-titre:("Et glace à la vanille de Madagascar"),
+        prix:("22€")
+        ),
+        3:(titre:("Mousse au chocolat"),
+        sous-titre:("Au piment d'Espelette et à la truffe noire"),
+        prix:("23€")
+        )
+    )
+);
+
+$resto4:(   
+    name:("Le délice des sens"), 
+    entrees:(
+        1:(titre:("Tartare de thon"),
+        sous-titre:("Assaisonné au yuzu"),
+        prix:("25€")
+        ),
+        2:(titre:("Bouchée de homard croustillant"),
+        sous-titre:("Et sa farandole de petits légumes"),
+        prix:("35€")
+        ),
+        3:(titre:("Velouté de cèpes"),
+        sous-titre:("Aux truffes"),
+        prix:("20€")
+        )
+    ),
+    plats:(
+        1:(titre:("Poulet rôti aux herbes de Provence"),
+        sous-titre:("Et sa crème de truffe"),
+        prix:("40€")
+        ),
+        2:(titre:("Langouste rôtie"),
+        sous-titre:("Et ses légumes de saison"),
+        prix:("35€")
+        ),
+        3:(titre:("Côte de boeuf Angus"),
+        sous-titre:("Et sa purée de panais"),
+        prix:("44€")
+        )
+    ),
+    desserts:(
+        1:(titre:("Farandole de desserts"),
+        sous-titre:("Du chef"),
+        prix:("18€")
+        ),
+        2:(titre:("Crème brulée"),
+        sous-titre:("Revisitée"),
+        prix:("22€")
+        ),
+        3:(titre:("Tiramisu"),
+        sous-titre:("À la noisette"),
+        prix:("23€")
+        )
+    )
+);
+
+$restoX:(
+    name:(""),  
+    entrees:(
+        1:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        2:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        3:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        )
+    ),
+    plats:(
+        1:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        2:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        3:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        )
+    ),
+    desserts:(
+        1:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        2:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        ),
+        3:(titre:(""),
+        sous-titre:(""),
+        prix:("")
+        )
+    )
+);
+
+$restos:(
+    1:($resto1),
+    4:($resto4)
+)

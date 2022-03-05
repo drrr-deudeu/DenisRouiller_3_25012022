@@ -38,6 +38,17 @@
         box-shadow: 4px 6px 9px 0px $color-grey-dark;
         & figure {
             width: 100%;
+            & .image-vignet{
+                display: flex;
+                & .nouveau{
+                    position: absolute;
+                    right:50px;
+                    z-index: 2;
+                    background-color: $color-tertiary;
+                    padding: 10px;
+                    margin-top: 5%;
+                }
+            }
             & img{
                 object-fit:fill;
                 height: 180px;

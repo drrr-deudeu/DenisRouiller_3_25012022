@@ -1,0 +1,65 @@
+@mixin box-shadow {
+    box-shadow: 4px 6px 9px 0px $color-grey-dark;    
+}
+
+
+@mixin resto-name($resto){
+    & .resto-name::after{
+        content: map-get($resto,"name");
+    }
+}
+
+
+@mixin label($label) {
+    &::after{
+        content: $label;
+    }
+}
+
+@mixin assiettes($resto,$type) {
+    $plats : map-get($resto,$type);
+    @each $key,$assiette in $plats{
+        & .menu__#{$type}__#{$key}{
+            & .assiette{
+                &__description__appelation::after{
+                    content: map-get($assiette,"titre");
+                }
+                &__description__precision::after{
+                    content: map-get($assiette,"sous-titre");
+                }
+                &__prix::after{
+                    content: map-get($assiette,"prix");
+                }
+            }
+        }
+    }
+    
+}
+
+@mixin menu($resto,$type,$label){
+    &__#{$type}{
+        & .label__content{
+            @include label($label);
+        }
+    }
+    &__#{$type}__list{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include assiettes($resto,$type);
+    }
+}
+
+@mixin carte($resto){
+    @each $key,$val in $labels{
+        @include menu($resto:$resto,$type:$key,$label:$val);
+    }
+}
+
+@mixin cartes{
+    @each $key,$val in $restos{
+        & .menu#{$key}{
+            @include carte($resto:$val);
+        }
+    }
+}
