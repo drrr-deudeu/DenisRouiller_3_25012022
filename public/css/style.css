@@ -22,7 +22,7 @@ a:link, a:visited {
   font-family: "Shrikhand", cursive;
 }
 .titres__principal, .logos__principal {
-  font-size: 8.25vw;
+  font-size: 7vw;
 }
 
 .textes {
@@ -59,6 +59,57 @@ a:link, a:visited {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
+}
+
+@keyframes check-show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70px;
+  }
+}
+@-webkit-keyframes check-show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70px;
+  }
+}
+@keyframes coche-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes coche-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.chosen {
+  min-width: 70px;
+  height: 66px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+}
+.chosen__coche {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: #99E2D0;
+  -webkit-mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
+  mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
 }
 
 header {
@@ -276,32 +327,70 @@ header {
 }
 
 .assiette {
+  min-width: 100%;
   width: 100%;
-  background-color: white;
-  box-shadow: 4px 6px 9px 0px #D2D2D2;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
   padding: 12px;
+  transition: min-width 1s, margin-right 1s;
+  margin-right: 0%;
 }
 .assiette__description {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 90%;
 }
 .assiette__description__appelation {
   font-weight: bold;
   font-size: 18px;
+  height: 21px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .assiette__description__precision {
   font-size: 15px;
+  height: 17px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .assiette__prix {
   font-size: 15px;
   font-weight: bold;
-  padding-right: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.block-assiette {
+  width: 100%;
+  overflow: hidden;
+  height: 68px;
+  height: auto;
+  background-color: white;
+  box-shadow: 4px 6px 9px 0px #D2D2D2;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.block-assiette:hover .assiette {
+  min-width: 80%;
+  margin-right: 0;
+}
+.block-assiette:hover .assiette__description {
+  width: 80%;
+}
+.block-assiette:hover .chosen__coche {
+  animation-iteration-count: 1;
+  -webkit-animation: coche-turn 1s forwards;
+  /* Safari, Opera, Chrome */
+  animation: coche-turn 1s forwards;
+  /* Tous les autres navigateurs */
 }
 
 footer {

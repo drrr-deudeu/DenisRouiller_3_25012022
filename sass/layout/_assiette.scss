@@ -1,28 +1,69 @@
 .assiette{
+    min-width:100%;
     width: 100%;
-    background-color: white;
-    @include box-shadow;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     padding: 12px;
+    transition: min-width 1s, margin-right 1s;
+    margin-right: 0%;
     &__description{
         display: flex;
         flex-direction: column;
         gap: 4px;
+        width: 90%;
+
         &__appelation{
             font-weight: bold;
             font-size: 18px;
+            height: 21px;
+            text-overflow:ellipsis; 
+            overflow: hidden;
+            white-space: nowrap;
         }
         &__precision{
             font-size: 15px;
+            height: 17px;
+            text-overflow:ellipsis; 
+            overflow: hidden;
+            white-space: nowrap;
         }
     }
     &__prix{
         font-size: 15px;
         font-weight: bold;
-        padding-right: 10px;
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+}
+
+.block-assiette{
+    width: 100%;
+    overflow:hidden;
+    height: 68px;
+    height: auto;
+    background-color: white;
+    @include box-shadow;
+    border-radius: $block-assiette-radius;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &:hover{
+        & .assiette{
+            min-width: 80%;
+            margin-right: 0;
+            &__description{
+                width: 80%;
+            }
+        }
+        & .chosen{
+            &__coche{
+                animation-iteration-count: 1;
+                -webkit-animation: coche-turn $check-show-effect-duration forwards; /* Safari, Opera, Chrome */
+                animation: coche-turn $check-show-effect-duration forwards; /* Tous les autres navigateurs */    
+            }
+        }
     }
 }
