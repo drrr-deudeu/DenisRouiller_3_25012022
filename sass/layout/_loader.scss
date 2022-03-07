@@ -1,0 +1,93 @@
+
+@keyframes decale {
+  0% { opacity: 0;transform: translateY(80%) scale(2,2);}
+  50% { opacity: 0.5 ; transform: translateY(50%) scale(2,2);}
+  100% { opacity:1; transform:  translateY(0) scale(1,1);}
+}
+@-webkit-keyframes decale {
+  0% { opacity: 0;transform: translateY(80%) scale(2,2);}
+  50% { opacity: 0.5 ; transform: translateY(50%) scale(2,2);}
+  100% { opacity:1; transform:  translateY(0) scale(1,1);}
+}
+
+@keyframes slogan {
+  0% { opacity: 1;transform:  scale(2,2);}
+  50% { opacity: 0.5 ; transform:  scale(2,2);}
+  100% { opacity:0; transform: scale(0,0);}
+}
+
+@-webkit-keyframes slogan {
+  0% { opacity: 1;transform: scale(2,2);}
+  50% { opacity: 0.5 ; transform: scale(2,2);}
+  100% { opacity:0; transform: scale(0,0);}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) ;}
+  50% { transform: rotate(360deg) ;}
+  100% { transform: rotate(0) ;}  
+}
+
+@-webkit-keyframes spin {
+  0% { transform: rotate(0deg) ;}
+  50% { transform: rotate(360deg) ;}
+  100% { transform: rotate(0) ;}  
+}
+
+.loader {
+  animation-iteration-count: 1;
+  -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: decale $loader-effect-duration forwards; /* Tous les autres navigateurs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader_effect {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid $color-tertiary; 
+  border-radius: 100%;
+  background-color: $color-tertiary;
+  color: white;
+  width: 100%;
+  height: 30%;
+  // left: 25%;
+  // top: 25%;
+  position: absolute;
+  top: 200px;
+  animation-iteration-count: 1;
+  -webkit-animation: slogan $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: slogan $loader-effect-duration forwards; /* Tous les autres navigateurs */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & h2{
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+
+  }
+  & .hourglass{
+    animation-iteration-count: 1;    
+    -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+    animation: spin $loader-effect-duration forwards; /* Tous les autres navigateurs */
+    }
+}
+
+@keyframes start-invisible{
+  0% { opacity: 0;}
+  90% { opacity: 0;}
+  100% { opacity: 1;}
+}
+@-webkit-keyframes start-invisible{
+  0% { opacity: 0;}
+  90% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+.start-transparent{
+  animation-iteration-count: 1;
+  -webkit-animation: spin $loader-effect-duration forwards; /* Safari, Opera, Chrome */
+  animation: start-invisible $loader-effect-duration forwards; /* Tous les autres navigateurs */
+}

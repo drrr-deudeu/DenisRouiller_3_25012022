@@ -1,0 +1,10 @@
+.titres, .logos {
+    font-family: $font-logos-titres;
+    &__principal{
+        font-size: 7vw;
+    }
+}
+
+.textes{
+    font-family: $font-textes;
+}

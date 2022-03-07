@@ -1,0 +1,17 @@
+{
+  "name": "P3",
+  "version": "1.0.0",
+  "description": "sass et animations css",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css ",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.9"
+  },
+  "browserslist": "last 4 versions"
+}

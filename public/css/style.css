@@ -1,0 +1,1025 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.titres, .logos {
+  font-family: "Shrikhand", cursive;
+}
+.titres__principal, .logos__principal {
+  font-size: 7vw;
+}
+
+.textes {
+  font-family: "Roboto", sans-serif;
+}
+
+.button {
+  background: linear-gradient(-40deg, #9356DC, #FF79DA 100%);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 4px 6px 9px 0px #D2D2D2;
+  text-align: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  gap: 5px;
+}
+.label__label {
+  color: #868686;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+}
+.label__souligne {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+@keyframes check-show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70px;
+  }
+}
+@-webkit-keyframes check-show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70px;
+  }
+}
+@keyframes coche-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes coche-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.chosen {
+  min-width: 70px;
+  height: 66px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+}
+.chosen__coche {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: #99E2D0;
+  -webkit-mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
+  mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#header {
+  padding-top: 16px;
+  padding-bottom: 2px;
+}
+#header.accueil {
+  border-bottom: 3px solid #D2D2D2;
+}
+
+.resto-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.resto-header__invisible {
+  opacity: 0;
+}
+
+#localisation {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  background-color: #EAEAEA;
+  font-weight: bold;
+}
+#localisation .localisation {
+  width: 45%;
+}
+#localisation .localisation i {
+  padding-right: 15px;
+}
+
+.main {
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding-bottom: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+.main h1.textes {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 68%;
+  font-size: 25px;
+}
+.main p.textes {
+  color: #868686;
+  width: 90%;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fonctionnement {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 20px;
+}
+.fonctionnement h2 {
+  margin-bottom: 5px;
+}
+.fonctionnement__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.fonctionnement__item:hover .fonctionnement__item__subs {
+  background-color: #FF79DA;
+}
+.fonctionnement__item:hover .fonctionnement__item__subs i {
+  color: #9356DC;
+}
+.fonctionnement__item:hover .fonctionnement__item__subs__mobile {
+  background-color: #9356DC;
+}
+.fonctionnement__item__number {
+  position: absolute;
+  z-index: 2;
+  background-color: #9356DC;
+  color: white;
+  width: 25px;
+  height: 25px;
+  padding-top: 5px;
+  border-radius: 30px;
+  text-align: center;
+}
+.fonctionnement__item__subs {
+  position: relative;
+  z-index: 1;
+  margin-left: 12px;
+  width: 100%;
+  height: 77px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  box-shadow: 4px 6px 9px 0px #D2D2D2;
+  background-color: #F6F6F6;
+}
+.fonctionnement__item__subs i {
+  color: #868686;
+}
+.fonctionnement__item__subs__mobile {
+  height: 20px;
+  width: 20px;
+  background-color: #868686;
+  -webkit-mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
+  mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
+}
+.fonctionnement__item__subs span {
+  font-weight: bold;
+  width: 63%;
+}
+
+.restaurants-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 50px;
+  padding-bottom: 66px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #F6F6F6;
+}
+
+.restaurants-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.restaurants-list__item {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 6px 9px 0px #D2D2D2;
+}
+.restaurants-list__item figure {
+  width: 100%;
+}
+.restaurants-list__item figure .image-vignet {
+  display: flex;
+}
+.restaurants-list__item figure .image-vignet .nouveau {
+  position: absolute;
+  right: 50px;
+  z-index: 2;
+  background-color: #99E2D0;
+  padding: 10px;
+  margin-top: 5%;
+}
+.restaurants-list__item figure img {
+  object-fit: fill;
+  height: 180px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants-list__item figure figcaption {
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.restaurants-list__item figure figcaption .figcaption_text h2 {
+  font-size: 19px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+.restaurants-list__item figure figcaption .display_or_not .display_if_not_hover {
+  display: flex;
+}
+.restaurants-list__item figure figcaption .display_or_not .display_if_hover {
+  display: none;
+}
+.restaurants-list__item figure figcaption .display_or_not:hover .display_if_hover {
+  display: flex;
+}
+.restaurants-list__item figure figcaption .display_or_not:hover .display_if_not_hover {
+  display: none;
+}
+.restaurants-list__item figure figcaption .display_if_not_hover i {
+  color: black;
+}
+.restaurants-list__item figure figcaption .display_if_hover i {
+  color: #9356DC;
+}
+
+.assiette {
+  min-width: 100%;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px;
+  transition: min-width 1s, margin-right 1s;
+  margin-right: 0%;
+}
+.assiette__description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 90%;
+}
+.assiette__description__appelation {
+  font-weight: bold;
+  font-size: 18px;
+  height: 21px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.assiette__description__precision {
+  font-size: 15px;
+  height: 17px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.assiette__prix {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.block-assiette {
+  width: 100%;
+  overflow: hidden;
+  height: 68px;
+  height: auto;
+  background-color: white;
+  box-shadow: 4px 6px 9px 0px #D2D2D2;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.block-assiette:hover .assiette {
+  min-width: 80%;
+  margin-right: 0;
+}
+.block-assiette:hover .assiette__description {
+  width: 80%;
+}
+.block-assiette:hover .chosen__coche {
+  animation-iteration-count: 1;
+  -webkit-animation: coche-turn 1s forwards;
+  /* Safari, Opera, Chrome */
+  animation: coche-turn 1s forwards;
+  /* Tous les autres navigateurs */
+}
+
+footer {
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #383838;
+  color: white;
+}
+footer .titres {
+  margin-bottom: 10px;
+}
+
+#contact {
+  color: white;
+}
+
+.rubrique {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.rubrique__svg-handshake {
+  background-color: white;
+  height: 16px;
+  width: 16px;
+  -webkit-mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+  mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+}
+.rubrique__item {
+  font-size: 16px;
+  font-weight: bold;
+}
+.rubrique.textes {
+  font-size: 16px;
+}
+
+@keyframes decale {
+  0% {
+    opacity: 0;
+    transform: translateY(80%) scale(2, 2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%) scale(2, 2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1, 1);
+  }
+}
+@-webkit-keyframes decale {
+  0% {
+    opacity: 0;
+    transform: translateY(80%) scale(2, 2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%) scale(2, 2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1, 1);
+  }
+}
+@keyframes slogan {
+  0% {
+    opacity: 1;
+    transform: scale(2, 2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(2, 2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+@-webkit-keyframes slogan {
+  0% {
+    opacity: 1;
+    transform: scale(2, 2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(2, 2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.loader {
+  animation-iteration-count: 1;
+  -webkit-animation: spin 3s forwards;
+  /* Safari, Opera, Chrome */
+  animation: decale 3s forwards;
+  /* Tous les autres navigateurs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader_effect {
+  border: 8px solid #f3f3f3;
+  /* Light grey */
+  border-top: 8px solid #99E2D0;
+  border-radius: 100%;
+  background-color: #99E2D0;
+  color: white;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  top: 200px;
+  animation-iteration-count: 1;
+  -webkit-animation: slogan 3s forwards;
+  /* Safari, Opera, Chrome */
+  animation: slogan 3s forwards;
+  /* Tous les autres navigateurs */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loader_effect h2 {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.loader_effect .hourglass {
+  animation-iteration-count: 1;
+  -webkit-animation: spin 3s forwards;
+  /* Safari, Opera, Chrome */
+  animation: spin 3s forwards;
+  /* Tous les autres navigateurs */
+}
+
+@keyframes start-invisible {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes start-invisible {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.start-transparent {
+  animation-iteration-count: 1;
+  -webkit-animation: spin 3s forwards;
+  /* Safari, Opera, Chrome */
+  animation: start-invisible 3s forwards;
+  /* Tous les autres navigateurs */
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.background-image.resto1 {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.background-image.resto1 .resto-name::after {
+  content: "La palette du goût";
+}
+.background-image.resto4 {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.background-image.resto4 .resto-name::after {
+  content: "Le délice des sens";
+}
+
+.titre-coeur {
+  margin-top: 220px;
+  background-color: #F6F6F6;
+  padding-top: 30px;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.menu {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.menu .menu1__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu1__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Fricassée d'escargot";
+}
+.menu .menu1__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Au piment d'Espelette";
+}
+.menu .menu1__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu1__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Foie gras de canard mi-cuit";
+}
+.menu .menu1__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Et ses copeaux de truffe noire";
+}
+.menu .menu1__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu1__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Oeuf au plat";
+}
+.menu .menu1__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Assaisonné à la truffe sur lit de caviar";
+}
+.menu .menu1__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "20€";
+}
+.menu .menu1__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu1__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Filet de boeuf aux herbes";
+}
+.menu .menu1__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Accompagné de sa ribambelle de légumes";
+}
+.menu .menu1__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu1__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Parmentier de queue de boeuf";
+}
+.menu .menu1__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "À la truffe noire sur sa purée de panais";
+}
+.menu .menu1__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu1__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Filet de turbot";
+}
+.menu .menu1__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Aux agrumes";
+}
+.menu .menu1__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu1__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu1__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Paris-Brest";
+}
+.menu .menu1__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Revisité";
+}
+.menu .menu1__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu1__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Macaron au chocolat d'exception";
+}
+.menu .menu1__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Et glace à la vanille de Madagascar";
+}
+.menu .menu1__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu1__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Mousse au chocolat";
+}
+.menu .menu1__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "Au piment d'Espelette et à la truffe noire";
+}
+.menu .menu1__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
+}
+.menu .menu2__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Ravioles de foie gras";
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Accompagnés de leur crème à la truffe";
+}
+.menu .menu2__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Caviar osciètre";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Sur blini à la farine de blé noir";
+}
+.menu .menu2__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Homard et espuma de potiron";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Mariné aux zestes d'orange";
+}
+.menu .menu2__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "28€";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__description__appelation::after {
+  content: "Foie gras de canard cuit entier";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__description__precision::after {
+  content: "Confiture de figue et pain toasté";
+}
+.menu .menu2__entrees__list .menu__entrees__4 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Noix de coquilles Saint-Jacques";
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Sur lit de purée de céleri-rave";
+}
+.menu .menu2__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Langoustine poêlée";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "Purée de patate douce";
+}
+.menu .menu2__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Mijoté de queue de boeuf ";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Et riz sauvage aux zestes de citron";
+}
+.menu .menu2__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu2__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Macaron noisette et chocolat";
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Glace au caramel brun et sel de Guérande";
+}
+.menu .menu2__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Baba au rhum revisité";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Avec son coulis de citron";
+}
+.menu .menu2__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Tarte au citron meringuée";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "Déstructurée";
+}
+.menu .menu2__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
+}
+.menu .menu3__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Tartare de poulpe acidulé";
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Aux zestes d'orange";
+}
+.menu .menu3__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Velouté de légumes d'antan";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Carotte, panais, topinambour";
+}
+.menu .menu3__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Soupe à l'oignon";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Revisitée";
+}
+.menu .menu3__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "28€";
+}
+.menu .menu3__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Coquilles Saint-Jacques";
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Accompagnées d'une purée de panais";
+}
+.menu .menu3__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Magret de canard";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "Et parmentier de pommes de terre";
+}
+.menu .menu3__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Pigeonneau d’Ille-et-Vilaine";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Sur son lit de gnocchis aux légumes";
+}
+.menu .menu3__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu3__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Pétales de violettes glacés";
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Et purée de noisettes";
+}
+.menu .menu3__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Fondant au chocolat";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Revisité";
+}
+.menu .menu3__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Millefeuille croustillant";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "Myrtilles et pâte d’amande";
+}
+.menu .menu3__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
+}
+.menu .menu4__entrees__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu4__entrees__list .menu__entrees__1 .assiette__description__appelation::after {
+  content: "Tartare de thon";
+}
+.menu .menu4__entrees__list .menu__entrees__1 .assiette__description__precision::after {
+  content: "Assaisonné au yuzu";
+}
+.menu .menu4__entrees__list .menu__entrees__1 .assiette__prix::after {
+  content: "25€";
+}
+.menu .menu4__entrees__list .menu__entrees__2 .assiette__description__appelation::after {
+  content: "Bouchée de homard croustillant";
+}
+.menu .menu4__entrees__list .menu__entrees__2 .assiette__description__precision::after {
+  content: "Et sa farandole de petits légumes";
+}
+.menu .menu4__entrees__list .menu__entrees__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu4__entrees__list .menu__entrees__3 .assiette__description__appelation::after {
+  content: "Velouté de cèpes";
+}
+.menu .menu4__entrees__list .menu__entrees__3 .assiette__description__precision::after {
+  content: "Aux truffes";
+}
+.menu .menu4__entrees__list .menu__entrees__3 .assiette__prix::after {
+  content: "20€";
+}
+.menu .menu4__plats__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu4__plats__list .menu__plats__1 .assiette__description__appelation::after {
+  content: "Poulet rôti aux herbes de Provence";
+}
+.menu .menu4__plats__list .menu__plats__1 .assiette__description__precision::after {
+  content: "Et sa crème de truffe";
+}
+.menu .menu4__plats__list .menu__plats__1 .assiette__prix::after {
+  content: "40€";
+}
+.menu .menu4__plats__list .menu__plats__2 .assiette__description__appelation::after {
+  content: "Langouste rôtie";
+}
+.menu .menu4__plats__list .menu__plats__2 .assiette__description__precision::after {
+  content: "Et ses légumes de saison";
+}
+.menu .menu4__plats__list .menu__plats__2 .assiette__prix::after {
+  content: "35€";
+}
+.menu .menu4__plats__list .menu__plats__3 .assiette__description__appelation::after {
+  content: "Côte de boeuf Angus";
+}
+.menu .menu4__plats__list .menu__plats__3 .assiette__description__precision::after {
+  content: "Et sa purée de panais";
+}
+.menu .menu4__plats__list .menu__plats__3 .assiette__prix::after {
+  content: "44€";
+}
+.menu .menu4__desserts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu4__desserts__list .menu__desserts__1 .assiette__description__appelation::after {
+  content: "Farandole de desserts";
+}
+.menu .menu4__desserts__list .menu__desserts__1 .assiette__description__precision::after {
+  content: "Du chef";
+}
+.menu .menu4__desserts__list .menu__desserts__1 .assiette__prix::after {
+  content: "18€";
+}
+.menu .menu4__desserts__list .menu__desserts__2 .assiette__description__appelation::after {
+  content: "Crème brulée";
+}
+.menu .menu4__desserts__list .menu__desserts__2 .assiette__description__precision::after {
+  content: "Revisitée";
+}
+.menu .menu4__desserts__list .menu__desserts__2 .assiette__prix::after {
+  content: "22€";
+}
+.menu .menu4__desserts__list .menu__desserts__3 .assiette__description__appelation::after {
+  content: "Tiramisu";
+}
+.menu .menu4__desserts__list .menu__desserts__3 .assiette__description__precision::after {
+  content: "À la noisette";
+}
+.menu .menu4__desserts__list .menu__desserts__3 .assiette__prix::after {
+  content: "23€";
+}
+.menu .button {
+  align-self: center;
+  width: 185px;
+  margin-bottom: 55px;
+}
+
+/*# sourceMappingURL=style.css.map */

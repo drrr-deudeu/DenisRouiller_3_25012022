@@ -1,0 +1,25 @@
+.main{
+    background-color: #F6F6F6;
+    padding-top: 20px;
+    padding-bottom: 59px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    h1.textes{
+
+        margin-top: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 68%;
+        font-size: 25px;
+    }
+    p.textes{
+        color: $color-grey-dark-dark;
+        width: 90%;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

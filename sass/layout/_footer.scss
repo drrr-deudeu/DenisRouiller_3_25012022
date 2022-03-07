@@ -1,0 +1,37 @@
+footer{
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: $color-bck-footer;
+    color: white;
+    & .titres{
+        margin-bottom: 10px;
+    }
+}
+
+#contact {
+    color:white;
+}
+
+.rubrique{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    &__svg-handshake{
+        background-color: white;
+        height: $footer-font-size;
+        width: $footer-font-size;
+        -webkit-mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+        mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+        }
+    &__item{
+        font-size: $footer-font-size;
+        font-weight: bold;
+    }
+    &.textes{
+        font-size: $footer-font-size;
+    }
+}

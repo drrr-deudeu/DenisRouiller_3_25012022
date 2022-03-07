@@ -1,0 +1,27 @@
+@import "./utils/variables";
+// @import "./utils/functions";
+@import "./utils/mixins";
+// @import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+@import "./components/label";
+@import "./components/_coche.scss";
+
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/fonctionnement";
+@import "./layout/restaurants-list";
+
+@import "./layout/assiette";
+
+@import "./layout/footer";
+@import "./layout/loader";
+
+// @import "./layout/nav";
+// @import "./layout/container";
+// @import "./layout/form";
+
+@import "./pages/resto";
