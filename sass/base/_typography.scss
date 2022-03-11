@@ -1,7 +1,11 @@
 .titres, .logos {
     font-family: $font-logos-titres;
     &__principal{
-        font-size: 7vw;
+        font-size: 8.25vw;
+        @media (min-width: 599px) {
+            font-size: 47px;
+        }
+        // font-size: 31px;
     }
 }
 

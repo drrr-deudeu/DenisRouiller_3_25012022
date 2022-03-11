@@ -2,6 +2,9 @@
     box-shadow: 4px 6px 9px 0px $color-grey-dark;    
 }
 
+@mixin resto-image($resto){
+    background-image: url(map-get($resto,"background-image"));
+}
 
 @mixin resto-name($resto){
     & .resto-name::after{
@@ -9,6 +12,14 @@
     }
 }
 
+@mixin restos-header(){
+    @each $key,$resto in $restos{
+        &.resto#{$key}{
+            @include resto-image($resto);
+            @include resto-name($resto);
+        }
+    }
+}
 
 @mixin label($label) {
     &::after{
@@ -37,11 +48,18 @@
 }
 
 @mixin menu($resto,$type,$label){
-    &__#{$type}__list{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        @include assiettes($resto,$type);
+
+    &__#{$type}{
+        width: 100%;
+        @media (min-width: 599px) {
+            width: 375px;
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            @include assiettes($resto,$type);
+        }
     }
 }
 
@@ -57,4 +75,14 @@
             @include carte($resto:$val);
         }
     }
+}
+
+@mixin start-delai-mixin{
+    @for $i from 1 through 10 {
+        &.a#{$i}{
+            $start-delai: start-delai($i);
+            animation-delay: #{$start-delai}s;
+        }
+    }
+    
 }
