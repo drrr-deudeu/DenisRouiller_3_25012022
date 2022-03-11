@@ -3,16 +3,19 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: 100%;
-    &.resto1{
-        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-        // & .resto-name::after{
-        //     content: map-get($resto1,"name");
-        // }
-        @include resto-name($resto1);
+    @media (min-width: 599px) {
+        background-size: 100% 80%;
     }
-    &.resto4{
-        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-        @include resto-name($resto4);
+    background-color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include restos-header;
+    & .button{
+        align-self: center;
+        width: 185px;
+        margin-bottom: 55px;
     }
 }
 
@@ -26,19 +29,19 @@
     justify-content: space-around;
     align-items: center;
     padding-bottom: 25px;
+    width: 100%;
 }
 
 .menu {
+    width: 100%;
+    padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: $color-grey-light;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 0px;
+    row-gap: 40px;
     @include cartes;
-    & .button{
-        align-self: center;
-        width: 185px;
-        margin-bottom: 55px;
-    }
 }

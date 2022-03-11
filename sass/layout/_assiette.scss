@@ -1,5 +1,6 @@
 .assiette{
     min-width:100%;
+    max-width:90%;
     width: 100%;
     border-radius: 15px;
     display: flex;
@@ -7,58 +8,97 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 12px;
-    transition: min-width 1s, margin-right 1s;
+    transition: min-width 1s, margin-right 1s, margin-left 1s;
     margin-right: 0%;
     &__description{
         display: flex;
         flex-direction: column;
         gap: 4px;
-        width: 90%;
-
+        width: 100%;
+        text-overflow:ellipsis; 
+        overflow: hidden;
+        white-space: nowrap;
         &__appelation{
             font-weight: bold;
             font-size: 18px;
-            height: 21px;
+            // height: 21px;
             text-overflow:ellipsis; 
             overflow: hidden;
             white-space: nowrap;
+            // overflow: auto;
+            // white-space:normal;
         }
         &__precision{
+            font-weight: 300;
             font-size: 15px;
-            height: 17px;
+            height: 18px;
             text-overflow:ellipsis; 
             overflow: hidden;
             white-space: nowrap;
         }
     }
     &__prix{
+        width: 30px;
         font-size: 15px;
         font-weight: bold;
-        margin-right: 0px;
-        margin-left: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
 }
 
+@keyframes apparition {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
 .block-assiette{
+    opacity: 0;
     width: 100%;
     overflow:hidden;
-    height: 68px;
-    height: auto;
+    min-height: 70px;
+    height: 70px;
+    max-height:100px;
     background-color: white;
     @include box-shadow;
     border-radius: $block-assiette-radius;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
+    animation: apparition $loader-effect-duration forwards;
+    animation-iteration-count: 1;
+    //transition: height 1s;
+    @include start-delai-mixin;
+    @media (min-width: 599px) {
+        width: 350px;
+        max-width: 350px;
+    }
     &:hover{
+        //height: 70px;
+        box-shadow: 4px 6px 9px 0px $color-grey-dark-dark;
         & .assiette{
             min-width: 80%;
             margin-right: 0;
             &__description{
                 width: 80%;
+                text-overflow:ellipsis; 
+                overflow: hidden;
+                white-space: nowrap;
+                &__appelation{
+                    text-overflow:ellipsis; 
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
+            &__prix{
+                margin-right: 15px;
+                margin-left: 5px;
             }
         }
         & .chosen{
+            //box-sizing: border-box;
+            min-height: inherit;
+            height: inherit;
+            width: 60px;
+            max-width: 60px;
             &__coche{
                 animation-iteration-count: 1;
                 -webkit-animation: coche-turn $check-show-effect-duration forwards; /* Safari, Opera, Chrome */
@@ -66,4 +106,16 @@
             }
         }
     }
+}
+/* exception */
+#resto4-plat1{
+    height: 90px;
+    & .assiette__description__appelation{
+        overflow: auto;
+        white-space:normal;
+    }
+    & .chosen{
+        min-height: 90px;
+    }
+
 }

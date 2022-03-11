@@ -6,7 +6,11 @@
     padding-right: 22px;
     border-radius: 30px;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     box-shadow: 4px 6px 9px 0px $color-grey-dark;
     text-align: center;
+    &:hover{
+        background: linear-gradient(-40deg, lighten($color-primary,10%), lighten($color-secondary,10%) 100%);
+        box-shadow: 4px 6px 9px 0px $color-grey-dark-dark;
+    }
 }
