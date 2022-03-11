@@ -56,7 +56,9 @@
                 width: 20px;
                 background-color: $color-grey-dark-dark;
                 -webkit-mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
-                mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
+                mask: url(../images/svg/mobile-screen-button-solid.svg);
+                mask-repeat: no-repeat;
+                mask-position: center;
             }
             & span{
                 font-weight: bold;

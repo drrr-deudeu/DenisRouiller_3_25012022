@@ -32,6 +32,8 @@
         background-color: white;
         color: $color-tertiary;
         -webkit-mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
-        mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
+        mask: url(../images/svg/circle-check-solid.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
     }
 }

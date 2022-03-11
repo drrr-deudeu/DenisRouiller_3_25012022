@@ -109,7 +109,9 @@ a:link, a:visited {
   background-color: white;
   color: #99E2D0;
   -webkit-mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
-  mask: url(../images/svg/circle-check-solid.svg) no-repeat center;
+  mask: url(../images/svg/circle-check-solid.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 header {
@@ -237,7 +239,9 @@ header {
   width: 20px;
   background-color: #868686;
   -webkit-mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
-  mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
+  mask: url(../images/svg/mobile-screen-button-solid.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 .fonctionnement__item__subs span {
   font-weight: bold;
@@ -421,7 +425,9 @@ footer .titres {
   height: 16px;
   width: 16px;
   -webkit-mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
-  mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+  mask: url(../images/svg/handshake-angle-solid.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 .rubrique__item {
   font-size: 16px;

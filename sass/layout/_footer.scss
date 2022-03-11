@@ -25,7 +25,9 @@ footer{
         height: $footer-font-size;
         width: $footer-font-size;
         -webkit-mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
-        mask: url(../images/svg/handshake-angle-solid.svg) no-repeat center;
+        mask: url(../images/svg/handshake-angle-solid.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
         }
     &__item{
         font-size: $footer-font-size;
