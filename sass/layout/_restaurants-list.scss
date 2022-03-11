@@ -13,10 +13,11 @@
 // Le délice des sens
 // 5043 x 3456
 // louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash
+
 .restaurants-section{
     display: flex;
     flex-direction: column;
-    margin-top: 65px;
+    //padding-top: 65px;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 50px;
@@ -28,25 +29,46 @@
 .restaurants-list{
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
     &__item{
         width: 100%;
+        @media (min-width: 599px) {
+            width: 335px;
+        }
+    
         border-radius: 20px;
         box-shadow: 4px 6px 9px 0px $color-grey-dark;
+        &:hover{
+            box-shadow: 4px 6px 9px 0px $color-grey-dark-dark;
+        }
         & figure {
             width: 100%;
             & .image-vignet{
                 display: flex;
+                justify-content: center;
                 & .nouveau{
                     position: absolute;
-                    right:50px;
+                    right:40px;
                     z-index: 2;
                     background-color: $color-tertiary;
-                    padding: 10px;
-                    margin-top: 5%;
+                    color: darken($color-tertiary,35%);
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px 10px;
+                    border-radius: 2px;
+                    @media (min-width: 599px) {
+                        right: unset;
+                        margin-left: 210px;
+                    }
+                
                 }
             }
             & img{
@@ -72,31 +94,8 @@
                         line-height: 1.15;
                         font-weight: 600;
                     }
-                }
-                & .display_or_not{
-                    & .display_if_not_hover{
-                        display: flex;
-                    }
-                    & .display_if_hover{
-                        display: none;
-                    }
-                    &:hover{
-                        .display_if_hover{
-                            display: flex;
-                        }
-                        .display_if_not_hover{
-                            display: none;
-                        }
-                    }
-                }
-                & .display_if_not_hover{
-                    & i{
-                        color: black;
-                    }
-                }
-                & .display_if_hover{
-                    & i{
-                        color: $color-primary;
+                    & p{
+                        font-weight: 100;
                     }
                 }
             }

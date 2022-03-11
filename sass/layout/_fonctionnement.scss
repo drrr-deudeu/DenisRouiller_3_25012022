@@ -1,39 +1,54 @@
+.fonctionnement-section{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 65px;
+    background-color: white;
+}
+
 .fonctionnement{
-    margin-top: 50px;
+    padding-top: 30px;
     display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
+    //flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
     & h2{
         margin-bottom: 5px;
-
     }
     &__item{
         display: flex;
         flex-direction: row;
         align-items: center;
-        // justify-content: center;
         width: 100%;
+        @media (min-width: 599px) {
+            width: 250px;
+        }
         &:hover &__subs{
-            background-color: $color-secondary;
-            & i{
-                color: $color-primary;
-            }
-            &__mobile{
-                background-color: $color-primary;
+            box-shadow: 4px 6px 9px 0px $color-grey-dark-dark;
+            // background-color: $color-secondary;
+            background-color: lighten($color-mix,33%);
+            // & i{
+            //     color: $color-mix;
+            // }
+            // &__mobile{
+            //     background-color: $color-mix;
+            // }
+            & div{
+                background-color: $color-mix;
             }
         }
         &__number{
             position: absolute;
             z-index: 2;
-            background-color: $color-primary;
+            // background-color: $color-primary;
+            background-color: $color-mix;       
             color: white;
             width: 25px;
             height: 25px;
-            padding-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 30px;
-            text-align: center;
         }
         &__subs{
             position: relative;
@@ -48,15 +63,28 @@
             border-radius: 25px;
             box-shadow: 4px 6px 9px 0px $color-grey-dark;
             background-color: $color-grey-light;
-            & i{
-                color: $color-grey-dark-dark;
-            }
-            &__mobile{
+            // & i{
+            //     color: $color-grey-dark-dark;
+            // }
+            & div{
                 height: 20px;
                 width: 20px;
                 background-color: $color-grey-dark-dark;
+            }
+            &__mobile{
+                // height: 20px;
+                // width: 20px;
+                // background-color: $color-grey-dark-dark;
                 -webkit-mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
                 mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
+            }
+            &__list{
+                -webkit-mask: url(../images/svg/list-solid.svg) no-repeat center;
+                mask: url(../images/svg/list-solid.svg) no-repeat center;
+            }
+            &__store{
+                -webkit-mask: url(../images/svg/store-solid.svg) no-repeat center;
+                mask: url(../images/svg/store-solid.svg) no-repeat center;
             }
             & span{
                 font-weight: bold;

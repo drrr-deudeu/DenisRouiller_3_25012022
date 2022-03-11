@@ -18,16 +18,25 @@
 }
 
 .chosen {
-    min-width: 70px;
-    height: 66px;
+    margin: 0;
+    margin-left: 0px;
+    min-width: 60px;
+    width: 60px;
+    min-height: inherit;
+    max-height: 100px;
+    //height: 100px;
+    overflow-y: hidden;
     background-color: $color-tertiary;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0 $block-assiette-radius $block-assiette-radius 0;
     &__coche{
-        width: 30px;
-        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 23px;
+        height: 23px;
         border-radius: 50%;
         background-color: white;
         color: $color-tertiary;

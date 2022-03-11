@@ -1,0 +1,4 @@
+@function start-delai($i) {
+    $start-delai :  $start-delai-delta * $i;
+    @return $start-delai;
+}
