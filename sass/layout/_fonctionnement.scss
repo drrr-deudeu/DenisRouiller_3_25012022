@@ -63,18 +63,12 @@
             border-radius: 25px;
             box-shadow: 4px 6px 9px 0px $color-grey-dark;
             background-color: $color-grey-light;
-            // & i{
-            //     color: $color-grey-dark-dark;
-            // }
             & div{
                 height: 20px;
                 width: 20px;
                 background-color: $color-grey-dark-dark;
             }
             &__mobile{
-                // height: 20px;
-                // width: 20px;
-                // background-color: $color-grey-dark-dark;
                 -webkit-mask: url(../images/svg/mobile-screen-button-solid.svg) no-repeat center;
                 mask: url(../images/svg/mobile-screen-button-solid.svg);
                 mask-repeat: no-repeat;
