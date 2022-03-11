@@ -10,15 +10,18 @@
     h1.textes{
 
         margin-top: 20px;
-        margin-bottom: 15px;
+        margin-bottom: 17px;
         text-align: center;
         width: 68%;
         font-size: 25px;
+        font-weight: 600;
+        line-height: 1.05;
     }
     p.textes{
         color: $color-grey-dark-dark;
         width: 90%;
         font-size: 18px;
+        font-weight:400;
         text-align: center;
         margin-bottom: 30px;
     }

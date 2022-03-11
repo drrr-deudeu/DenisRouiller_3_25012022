@@ -1,0 +1,34 @@
+@keyframes heart-anim{
+    0% {opacity: 0.1;}
+    5% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+.display_or_not{
+    & .display_if_not_hover{
+        display: flex;
+    }
+    & .display_if_hover{
+        display: none;
+        color: $color-primary;
+    }
+    &:hover{
+        .display_if_hover{
+            display: flex;
+            animation: heart-anim 3s forwards;
+        }
+        .display_if_not_hover{
+            display: none;
+        }
+    }
+}
+.display_if_not_hover{
+    & i{
+        color: black;
+    }
+}
+.display_if_hover{
+    & i{
+        color: $color-primary;
+    }
+}
