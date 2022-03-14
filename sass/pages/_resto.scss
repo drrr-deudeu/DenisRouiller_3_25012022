@@ -12,10 +12,17 @@
     align-items: center;
     justify-content: center;
     @include restos-header;
+    & .cache-misere{
+        width: 100%;
+        background-color: $color-grey-light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 70px;
+    }
     & .button{
-        align-self: center;
         width: 185px;
-        margin-bottom: 55px;
     }
 }
 
@@ -40,7 +47,6 @@
     background-color: $color-grey-light;
     display: flex;
     justify-content: center;
-    // flex-direction: column;
     flex-wrap: wrap;
     column-gap: 0px;
     row-gap: 40px;

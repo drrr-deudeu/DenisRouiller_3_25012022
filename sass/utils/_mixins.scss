@@ -4,6 +4,10 @@
 
 @mixin resto-image($resto){
     background-image: url(map-get($resto,"background-image"));
+    background-size: contain;        
+    @media (min-width: 940px) {
+        background-size: cover;
+    }    
 }
 
 @mixin resto-name($resto){

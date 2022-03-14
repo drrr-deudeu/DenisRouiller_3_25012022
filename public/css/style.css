@@ -205,6 +205,13 @@ header {
 #localisation .localisation i {
   padding-right: 15px;
 }
+@media (min-width: 599px) {
+  #localisation .localisation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 .main {
   background-color: #F6F6F6;
@@ -339,7 +346,6 @@ header {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -385,7 +391,7 @@ header {
   }
 }
 .restaurants-list__item figure img {
-  object-fit: fill;
+  object-fit: cover;
   height: 180px;
   width: 100%;
   border-radius: 20px 20px 0 0;
@@ -775,32 +781,63 @@ footer .titres {
 }
 .background-image.resto1 {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: contain;
+}
+@media (min-width: 940px) {
+  .background-image.resto1 {
+    background-size: cover;
+  }
 }
 .background-image.resto1 .resto-name::after {
   content: "La palette du goût";
 }
 .background-image.resto2 {
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: contain;
+}
+@media (min-width: 940px) {
+  .background-image.resto2 {
+    background-size: cover;
+  }
 }
 .background-image.resto2 .resto-name::after {
   content: "La note enchantée";
 }
 .background-image.resto3 {
   background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: contain;
+}
+@media (min-width: 940px) {
+  .background-image.resto3 {
+    background-size: cover;
+  }
 }
 .background-image.resto3 .resto-name::after {
   content: "À la française";
 }
 .background-image.resto4 {
   background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: contain;
+}
+@media (min-width: 940px) {
+  .background-image.resto4 {
+    background-size: cover;
+  }
 }
 .background-image.resto4 .resto-name::after {
   content: "Le délice des sens";
 }
+.background-image .cache-misere {
+  width: 100%;
+  background-color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 70px;
+}
 .background-image .button {
-  align-self: center;
   width: 185px;
-  margin-bottom: 55px;
 }
 
 .titre-coeur {
